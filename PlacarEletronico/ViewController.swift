@@ -12,14 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let placarEletronico = PlacarEletronico(frame: self.view.frame)
         self.view.addSubview(placarEletronico)
-        
         
         placarEletronico.setNomeTimeA(nome: "Coritiba")
         placarEletronico.setNomeTimeB(nome: "Athletico")
         
-        
+
         
     }
 }

@@ -20,14 +20,14 @@ class PlacarTime:UIView{
     
     override init(frame: CGRect){
         super.init(frame: frame)
-        letreiroScore = Letreiro(frame: CGRect(x: 0,y: 0, width: frame.width, height: frame.height/2), colunas: 5 * (Caractere.larguraCaractere + 1) - 1)
+        letreiroScore = Letreiro(frame: CGRect(x: 0,y: 0, width: frame.width, height: frame.height/2), resolucao: Resolucao(linhas: 7, colunas:  5 * (Caractere.larguraCaractere + 1) - 1))
         letreiroScore.animado = false
         letreiroScore.cor = UIColor.green
         self.setScore(score: 0)
         self.addSubview(letreiroScore)
         
         
-        letreiroNome = Letreiro(frame: CGRect(x: 0,y: frame.height/2, width: frame.width, height: frame.height/2), colunas: 10 * (Caractere.larguraCaractere + 1) - 1)
+        letreiroNome = Letreiro(frame: CGRect(x: 0,y: frame.height/2, width: frame.width, height: frame.height/2), resolucao: Resolucao(linhas: 7, colunas: 10 * (Caractere.larguraCaractere + 1) - 1))
         letreiroNome.animado = false
         letreiroNome.cor = UIColor.green
         letreiroNome.posicaoCursor = 0
@@ -63,7 +63,7 @@ class PlacarEletronico: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        letreiroTempo = Letreiro(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height/2), colunas: 5 * (Caractere.larguraCaractere + 1) - 1)
+        letreiroTempo = Letreiro(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height/2), resolucao: Resolucao(linhas: 7, colunas: 5 * (Caractere.larguraCaractere + 1) - 1))
         letreiroTempo.animado = false
         letreiroTempo.texto = "00:00"
         letreiroTempo.posicaoCursor = 0
@@ -104,7 +104,7 @@ class PlacarEletronico: UIView {
         placarTimeA.setScore(score: score)
     }
     
-    func setNomeTimeB(score: Int){
+    func setScoreTimeB(score: Int){
         placarTimeB.setScore(score: score)
     }
     

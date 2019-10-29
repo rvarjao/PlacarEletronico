@@ -14,10 +14,10 @@
 		285C5B092367D8FC00519A5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285C5B082367D8FC00519A5E /* Assets.xcassets */; };
 		285C5B0C2367D8FC00519A5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285C5B0A2367D8FC00519A5E /* LaunchScreen.storyboard */; };
 		285C5B222367D94B00519A5E /* PlacarEletronico.xib in Resources */ = {isa = PBXBuildFile; fileRef = 285C5B212367D94A00519A5E /* PlacarEletronico.xib */; };
-		285C5B272367DBA000519A5E /* Caractere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C5B242367DBA000519A5E /* Caractere.swift */; };
-		285C5B282367DBA000519A5E /* Letreiro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C5B252367DBA000519A5E /* Letreiro.swift */; };
-		285C5B292367DBA000519A5E /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C5B262367DBA000519A5E /* Pixel.swift */; };
 		285C5B2B2367DBBC00519A5E /* PlacarEletronico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C5B2A2367DBBC00519A5E /* PlacarEletronico.swift */; };
+		28DADE892368EC7800156C96 /* Caractere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DADE862368EC7700156C96 /* Caractere.swift */; };
+		28DADE8A2368EC7800156C96 /* Letreiro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DADE872368EC7700156C96 /* Letreiro.swift */; };
+		28DADE8B2368EC7800156C96 /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DADE882368EC7700156C96 /* Pixel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +30,10 @@
 		285C5B0B2367D8FC00519A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		285C5B0D2367D8FC00519A5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		285C5B212367D94A00519A5E /* PlacarEletronico.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacarEletronico.xib; sourceTree = "<group>"; };
-		285C5B242367DBA000519A5E /* Caractere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Caractere.swift; sourceTree = "<group>"; };
-		285C5B252367DBA000519A5E /* Letreiro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Letreiro.swift; sourceTree = "<group>"; };
-		285C5B262367DBA000519A5E /* Pixel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
 		285C5B2A2367DBBC00519A5E /* PlacarEletronico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacarEletronico.swift; sourceTree = "<group>"; };
+		28DADE862368EC7700156C96 /* Caractere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Caractere.swift; sourceTree = "<group>"; };
+		28DADE872368EC7700156C96 /* Letreiro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Letreiro.swift; sourceTree = "<group>"; };
+		28DADE882368EC7700156C96 /* Pixel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pixel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 				285C5B052367D8F500519A5E /* Main.storyboard */,
 				285C5B2A2367DBBC00519A5E /* PlacarEletronico.swift */,
 				285C5B212367D94A00519A5E /* PlacarEletronico.xib */,
-				285C5B232367DBA000519A5E /* Letreiro */,
+				28DADE852368EC7700156C96 /* Letreiro */,
 				285C5B082367D8FC00519A5E /* Assets.xcassets */,
 				285C5B0A2367D8FC00519A5E /* LaunchScreen.storyboard */,
 				285C5B0D2367D8FC00519A5E /* Info.plist */,
@@ -80,12 +80,12 @@
 			path = PlacarEletronico;
 			sourceTree = "<group>";
 		};
-		285C5B232367DBA000519A5E /* Letreiro */ = {
+		28DADE852368EC7700156C96 /* Letreiro */ = {
 			isa = PBXGroup;
 			children = (
-				285C5B242367DBA000519A5E /* Caractere.swift */,
-				285C5B252367DBA000519A5E /* Letreiro.swift */,
-				285C5B262367DBA000519A5E /* Pixel.swift */,
+				28DADE862368EC7700156C96 /* Caractere.swift */,
+				28DADE872368EC7700156C96 /* Letreiro.swift */,
+				28DADE882368EC7700156C96 /* Pixel.swift */,
 			);
 			path = Letreiro;
 			sourceTree = "<group>";
@@ -162,11 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				285C5B282367DBA000519A5E /* Letreiro.swift in Sources */,
-				285C5B272367DBA000519A5E /* Caractere.swift in Sources */,
+				28DADE8B2368EC7800156C96 /* Pixel.swift in Sources */,
 				285C5B042367D8F500519A5E /* ViewController.swift in Sources */,
+				28DADE8A2368EC7800156C96 /* Letreiro.swift in Sources */,
 				285C5B002367D8F500519A5E /* AppDelegate.swift in Sources */,
-				285C5B292367DBA000519A5E /* Pixel.swift in Sources */,
+				28DADE892368EC7800156C96 /* Caractere.swift in Sources */,
 				285C5B2B2367DBBC00519A5E /* PlacarEletronico.swift in Sources */,
 				285C5B022367D8F500519A5E /* SceneDelegate.swift in Sources */,
 			);

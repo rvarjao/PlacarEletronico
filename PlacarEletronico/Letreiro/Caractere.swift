@@ -380,15 +380,15 @@ class Caractere: NSObject {
                 [false, true, true, true, false]
             ]
         case ":":
-        return [
-            [false, false, false, false, false],
-            [false, false, false, false, false],
-            [false, false, true, false, false],
-            [false, false, false, false, false],
-            [false, false, true, false, false],
-            [false, false, false, false, false],
-            [false, false, false, false, false]
-        ]
+            return [
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, true, false, false],
+                [false, false, false, false, false],
+                [false, false, true, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false]
+            ]
         case " ":
             return [
                 [false, false, false, false, false],

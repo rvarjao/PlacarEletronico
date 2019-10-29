@@ -8,16 +8,21 @@
 
 import UIKit
 
-class Letreiro: UIView {
-    
-    private let linhas = 7
+struct Resolucao {
+    var linhas = 7
     var colunas = 50
+}
+class Letreiro: UIView {
+    var resolucao = Resolucao()
+//    private let linhas = 7
+//    var colunas = 50
     var pixels = [Pixel]()
     var texto: String = ""{
         didSet{
             self.reiniciar()
         }
     }
+    
     
     private var timerAnimacao : Timer!
 
@@ -50,21 +55,23 @@ class Letreiro: UIView {
         }
     }
     
-    required init(frame: CGRect, colunas: Int){
-        super.init(frame: frame)
-        self.colunas = colunas
-        self.commonInit()
-    }
-    
     override init(frame: CGRect){
         super.init(frame: frame)
-        self.commonInit()
+        self.commonInit(frame: frame)
     }
     
-    func commonInit(){
+    init(frame: CGRect, resolucao: Resolucao){
+        super.init(frame: frame)
+        self.resolucao = resolucao
+        self.commonInit(frame: frame)
+    }
+    
+    func commonInit(frame: CGRect){
         var x : CGFloat = 0
         var y : CGFloat = 0
-                
+        let colunas = resolucao.colunas
+        let linhas = resolucao.linhas
+        
         let width : CGFloat = min(frame.width / CGFloat(colunas), frame.height / CGFloat(linhas))
         let height : CGFloat = width
 
@@ -104,6 +111,8 @@ class Letreiro: UIView {
     
     func setArcoIris(arcoIris: Bool){
         if arcoIris{
+            let colunas = resolucao.colunas
+            
             //hsb color
             var h : CGFloat = 0
             let s : CGFloat = 1.0
@@ -126,6 +135,7 @@ class Letreiro: UIView {
         self.reiniciar()
         let posicaoMinima = -texto.count * Caractere.larguraCaractere
         let posicaoCursorInicial = posicaoCursor
+        let colunas = resolucao.colunas
         
         var pixelIndex : Int!
         var pixel : Pixel!
@@ -138,7 +148,7 @@ class Letreiro: UIView {
                     if (j + posicaoCursor >= 0 && j + posicaoCursor < colunas){
                         pixelIndex = i * colunas + j + posicaoCursor
                         pixel = pixels[pixelIndex]
-                        pixel.ligado = estado                        
+                        pixel.ligado = estado
                     }
                 }
             }

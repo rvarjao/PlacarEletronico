@@ -12,9 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let placarEletronico = PlacarEletronico(frame: self.view.frame)
+        self.view.addSubview(placarEletronico)
+        
+        
+        placarEletronico.setNomeTimeA(nome: "Coritiba")
+        placarEletronico.setNomeTimeB(nome: "Athletico")
+        
+        
+        
     }
-
-
 }
 
